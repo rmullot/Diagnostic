@@ -1,0 +1,6 @@
+framework module Pods_RMCore {
+  umbrella header "Pods-RMCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
