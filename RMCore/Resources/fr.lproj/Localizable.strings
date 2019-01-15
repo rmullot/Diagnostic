@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Diagnostic
+
+  Created by Romain Mullot on 15/01/2019.
+  Copyright © 2019 Romain Mullot. All rights reserved.
+*/
+
+"deniedAccessTitle" = "Accès refusé";
+
+"errorCameraCantBeUsedWithoutAccess" = "L'apparil photo ne peut être utilisé sans votre accord.";
+
+"errorDeniedAccessCamera" = "Vous avez refusé l'accès à la camera. Veuillez modifier votre paramétrage";
+
+"okTitle" = "OK";

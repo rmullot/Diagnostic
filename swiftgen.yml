@@ -1,0 +1,6 @@
+strings:
+  inputs:
+  - Diagnostic/Resources/en.lproj/Localizable.strings
+  outputs:
+    templateName: structured-swift4
+    output: Diagnostic/Generated/Strings.swift

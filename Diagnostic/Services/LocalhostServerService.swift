@@ -50,32 +50,32 @@ final class LocalhostServerService: LocalhostServerServiceProtocol {
 
       if let photoTestData = receivedDiagnostic?.photoTestData {
           diagnosticAvailable = true
-          log.append(Constants.logReceivedPhotoDiagnostic)
+          log.append(L10n.logReceivedPhotoDiagnostic)
           if let photoBase64 = photoTestData.photo, let image = photoBase64.decodePhoto(), let sizeString = image.pngData()?.toBytesString() {
-              log.append(String(format: Constants.logSizePhoto, sizeString))
+              log.append(L10n.logSizePhoto(sizeString))
               photoNotAvailable = false
           } else {
-              log.append(Constants.logFailPhotoDiagnostic)
+              log.append(L10n.logFailPhotoDiagnostic)
           }
           log.append("\n\n")
       } else {
-          log.append(Constants.logUnavailablePhotoDiagnostic)
+          log.append(L10n.logUnavailablePhotoDiagnostic)
       }
 
       if receivedDiagnostic?.gpsTestData != nil {
         diagnosticAvailable = true
       } else {
-         log.append(Constants.logUnavailableGPSDiagnostic)
+         log.append(L10n.logUnavailableGPSDiagnostic)
       }
 
       if receivedDiagnostic?.touchScreenTestData != nil {
         diagnosticAvailable = true
       } else {
-        log.append(Constants.logUnavailableTouchScreenDiagnostic)
+        log.append(L10n.logUnavailableTouchScreenDiagnostic)
       }
 
       if !diagnosticAvailable || receivedDiagnostic == nil {
-        log.append(Constants.logUnavailableAllDiagnostics)
+        log.append(L10n.logUnavailableAllDiagnostics)
         completionHandler(log, .diagnosticNotFound)
         return
       }
@@ -88,8 +88,8 @@ final class LocalhostServerService: LocalhostServerServiceProtocol {
 
   func sendDiagnostic(diagnosticJSON: Data, completionHandler: @escaping LocalhostServerCompletionHandler) {
     guard onlineMode != .offline else {
-      AlertActionService.sharedInstance.showAlertWith(title: Constants.errorTitle, message: Constants.errorUnavailableNetwork)
-      completionHandler(Constants.errorUnavailableNetwork, .noNetwork)
+      AlertActionService.sharedInstance.showAlertWith(title: L10n.errorTitle, message: L10n.errorUnavailableNetwork)
+      completionHandler(L10n.errorUnavailableNetwork, .noNetwork)
       return
     }
     NetworkActivityService.sharedInstance.newRequestStarted()
@@ -138,13 +138,13 @@ final class LocalhostServerService: LocalhostServerServiceProtocol {
     switch onlineMode {
     case .offline:
     view.configureTheme(.warning)
-    view.configureContent(title: Constants.errorTitle, body: Constants.errorUnavailableNetwork)
+    view.configureContent(title: L10n.errorTitle, body: L10n.errorUnavailableNetwork)
     case .onlineSlow:
     view.configureTheme(.warning)
-    view.configureContent(title: Constants.errorTitle, body: Constants.badNetworkMessage)
+    view.configureContent(title: L10n.errorTitle, body: L10n.badNetworkMessage)
     case .online:
     view.configureTheme(.success)
-    view.configureContent(title: Constants.okTitle, body: Constants.networkAvailableMessage)
+    view.configureContent(title: L10n.okTitle, body: L10n.networkAvailableMessage)
     }
     SwiftMessages.show {
       view.configureDropShadow()

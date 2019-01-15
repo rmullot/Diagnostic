@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Diagnostic
+
+  Created by Romain Mullot on 15/01/2019.
+  Copyright © 2019 Romain Mullot. All rights reserved.
+*/
+
+"deniedAccessTitle" = "Denied Access";
+
+"errorCameraCantBeUsedWithoutAccess" = "Camera device cannot be used without your agreement.";
+
+"errorDeniedAccessCamera" = "You have denied the camera access. Please, modify your settings";
+
+"okTitle" = "OK";

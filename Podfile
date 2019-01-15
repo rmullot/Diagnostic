@@ -9,6 +9,7 @@ target 'Diagnostic' do
   pod 'FTLinearActivityIndicator', '~> 1.1.2'
   pod 'ReachabilitySwift', '~> 4.3.0'
   pod 'RxSwift', '~> 4.4.0'
+  pod 'SwiftGen', '~> 6.0.2'
 
   target 'DiagnosticTests' do
     inherit! :search_paths

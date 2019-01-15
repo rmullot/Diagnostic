@@ -34,7 +34,7 @@ final class ResultDiagnosticViewModel: BaseViewModel {
     func loadDiagnostic() {
       DiagnosticService.sharedInstance.getDiagnosticJSON { diagnostic in
         self.diagnosticJSON = diagnostic
-        let infos = String(format: Constants.logDiagnosticReadyToSend, diagnostic.toBytesString())
+        let infos = L10n.logDiagnosticReadyToSend(diagnostic.toBytesString())
         self.propertyChanged?(PropertyNames.readyToSend.rawValue)
         self.log = infos
       }

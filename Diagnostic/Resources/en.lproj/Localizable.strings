@@ -1,0 +1,62 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Romain Mullot on 15/01/2019.
+  
+*/
+
+// MARK: - Text
+
+"badNetworkMessage" = "Bad Network";
+
+"errorTitle" = "Error";
+
+"isThisPhotoIsGoodTitle" = "The photo is enough good?";
+
+"networkAvailableMessage" = "Network available";
+
+"noTitle" = "No";
+
+"okTitle" = "OK";
+
+"yesTitle" = "Yes";
+
+
+// MARK: - Error Text
+
+"errorCameraUnavailable" = "Simulator or unavailable camera.";
+
+"errorLampUnavailable" = "Simulator or unavailable lamp.";
+
+"errorMessageInvalidEmail" = "Invalid email.";
+
+"errorMessageInvalidPassword" = "Invalid password.";
+
+"errorMessageInvalidSignInForm" = "Invalid sign.";
+
+"errorMessageMandatoryEmail" = "Email field is a mandatory.";
+
+"errorMessageMandatoryPassword" = "Password field is a mandatory.";
+
+"errorMessageTooShortPassword" = "Your password must have at least 8 characters.";
+
+"errorUnavailableNetwork" = "Unavailable or lost Network.";
+
+// MARK: - Diagnostic logs
+
+"logDiagnosticReadyToSend" = "\nDiagnostic prepared.\nSize %@. \nReady to be sent\n";
+
+"logReceivedPhotoDiagnostic" = "The server has received Photo diagnostic\n";
+
+"logSizePhoto" = "photo size of %@ in PNG format.\n";
+
+"logFailPhotoDiagnostic" = "photo not available. Device has failed the Photo Diagnostic";
+
+"logUnavailablePhotoDiagnostic" = "The server has not received Photo Diagnostic\n";
+
+"logUnavailableGPSDiagnostic" = "The server has not received GPS Diagnostic\n";
+
+"logUnavailableTouchScreenDiagnostic" = "The server has not received Touch Screen Diagnostic\n";
+
+"logUnavailableAllDiagnostics" = "The server has not received any diagnostics\n";

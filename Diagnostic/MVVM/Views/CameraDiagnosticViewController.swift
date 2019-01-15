@@ -34,7 +34,7 @@ final class CameraDiagnosticViewController: BaseViewController<CameraDiagnosticV
         viewModel.propertyChanged = { [weak self] name in self?.viewModelPropertyChanged(name) }
         viewModel.askPermissionForCamera { (granted) in
           guard granted, let captureDevice = CameraService.bestDevice(in: .back) else {
-              self.displayErrorLabel(error: Constants.errorCameraUnavailable)
+              self.displayErrorLabel(error: L10n.errorCameraUnavailable)
               return
           }
           self.startDeviceCapture(captureDevice: captureDevice)
@@ -184,7 +184,7 @@ final class CameraDiagnosticViewController: BaseViewController<CameraDiagnosticV
     } catch {
       // If any error occurs, simply print it out and don't continue any more.
       print(error)
-      self.displayErrorLabel(error: Constants.errorCameraUnavailable)
+      self.displayErrorLabel(error: L10n.errorCameraUnavailable)
       return
     }
 
