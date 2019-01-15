@@ -42,11 +42,11 @@ final class SignInViewModel: BaseViewModel {
       self.email = email
       if endEditing {
           guard email.isNotEmpty else {
-              errorMessage = Constants.errorMessageMandatoryEmail
+              errorMessage = L10n.errorMessageMandatoryEmail
               return
           }
           guard isEmailValid else {
-              errorMessage = Constants.errorMessageInvalidEmail
+              errorMessage = L10n.errorMessageInvalidEmail
               return
           }
       }
@@ -56,11 +56,11 @@ final class SignInViewModel: BaseViewModel {
       self.password = password
       if endEditing {
           guard password.isNotEmpty else {
-              errorMessage = Constants.errorMessageMandatoryPassword
+              errorMessage = L10n.errorMessageMandatoryPassword
               return
           }
           guard isPasswordEnoughStrong else {
-              errorMessage = Constants.errorMessageTooShortPassword
+              errorMessage = L10n.errorMessageTooShortPassword
               return
           }
       }
@@ -84,12 +84,12 @@ final class SignInViewModel: BaseViewModel {
 
     func signInEvent() {
       guard isValid else {
-          errorMessage = Constants.errorMessageInvalidSignInForm
+          errorMessage = L10n.errorMessageInvalidSignInForm
           propertyChanged?(PropertyNames.signInInValid.rawValue)
           return
       }
       guard isPasswordValid else {
-          errorMessage = Constants.errorMessageInvalidPassword
+          errorMessage = L10n.errorMessageInvalidPassword
           propertyChanged?(PropertyNames.signInInValid.rawValue)
           return
       }

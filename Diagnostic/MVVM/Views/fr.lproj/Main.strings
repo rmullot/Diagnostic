@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "ENVOYER"; ObjectID = "5R8-cD-T99"; */
+"5R8-cD-T99.normalTitle" = "ENVOYER";
+
+/* Class = "UIButton"; normalTitle = "LAMPE"; ObjectID = "6J0-vw-VW0"; */
+"6J0-vw-VW0.normalTitle" = "LAMPE";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "F3s-vF-phP"; */
+"F3s-vF-phP.normalTitle" = "SIGN IN";
+
+/* Class = "UIButton"; normalTitle = "PHOTO"; ObjectID = "NO2-Vg-Wh5"; */
+"NO2-Vg-Wh5.normalTitle" = "PHOTO";
+
+/* Class = "UIButton"; normalTitle = "Nouveau diagnositc"; ObjectID = "a4D-Rm-srE"; */
+"a4D-Rm-srE.normalTitle" = "Nouveau diagnositc";
+
+/* Class = "UILabel"; text = "Prenez une photo"; ObjectID = "lOS-yr-KHA"; */
+"lOS-yr-KHA.text" = "Prenez une photo";
+
+/* Class = "UITextView"; text = "Diagnostic en cours de chargement..."; ObjectID = "u8V-lM-BMz"; */
+"u8V-lM-BMz.text" = "Diagnostic en cours de chargement...";

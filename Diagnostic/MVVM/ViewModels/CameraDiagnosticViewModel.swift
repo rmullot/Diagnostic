@@ -27,7 +27,7 @@ final class CameraDiagnosticViewModel: BaseViewModel {
       lampActivated = !lampActivated
       let available = CameraService.toggleTorch(isOn: lampActivated)
       if !available {
-          errorMessage = Constants.errorLampUnavailable
+          errorMessage = L10n.errorLampUnavailable
       }
       return available
     }
@@ -39,14 +39,14 @@ final class CameraDiagnosticViewModel: BaseViewModel {
     }
 
     func finishDiagnostic(photoBase64: String) {
-      titleMessage = Constants.isThisPhotoIsGoodTitle
+      titleMessage = L10n.isThisPhotoIsGoodTitle
       var actions = [AlertAction]()
-      let yesAction = AlertAction(title: Constants.yesTitle, type: .default) {
+      let yesAction = AlertAction(title: L10n.yesTitle, type: .default) {
           DiagnosticService.sharedInstance.setTimer(Date(), isLaunched: false)
           DiagnosticService.sharedInstance.setPhotoPrint(photoBase64: photoBase64)
           NavigationService.sharedInstance.navigateToResultDiagnostic()
       }
-      let noAction = AlertAction(title: Constants.noTitle, type: .default) {
+      let noAction = AlertAction(title: L10n.noTitle, type: .default) {
           DiagnosticService.sharedInstance.setTimer(Date(), isLaunched: false)
           DiagnosticService.sharedInstance.setPhotoPrint(photoBase64: "")
           NavigationService.sharedInstance.navigateToResultDiagnostic()

@@ -4,6 +4,7 @@ PODS:
   - RxAtomic (4.4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SwiftGen (6.0.2)
   - SwiftLint (0.29.3)
   - SwiftMessages (6.0.2):
     - SwiftMessages/App (= 6.0.2)
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - FTLinearActivityIndicator (~> 1.1.2)
   - ReachabilitySwift (~> 4.3.0)
   - RxSwift (~> 4.4.0)
+  - SwiftGen (~> 6.0.2)
   - SwiftLint
   - SwiftMessages
 
@@ -22,6 +24,7 @@ SPEC REPOS:
     - ReachabilitySwift
     - RxAtomic
     - RxSwift
+    - SwiftGen
     - SwiftLint
     - SwiftMessages
 
@@ -30,9 +33,10 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
   SwiftLint: bfa7ca7b4d170cfaf0d236ca3ffd969e88a2f002
   SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
 
-PODFILE CHECKSUM: 5886b7a9e3922bb74e26adc0ac4f235c00b4645a
+PODFILE CHECKSUM: 277761df1173bb4f3d321b950152e04778852c7b
 
 COCOAPODS: 1.6.0.beta.2
