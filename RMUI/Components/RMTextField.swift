@@ -44,11 +44,11 @@ public class RMTextField: UIView {
 
     // MARK: - Public Properties
 
-    public var didBeginEditing: RMTextFieldClosure
+    public var didBeginEditing: RMTextFieldClosure = nil
 
-    public var didEndEditing: RMTextFieldClosure
+    public var didEndEditing: RMTextFieldClosure = nil
 
-    public var textDidChange: RMTextFieldClosure
+    public var textDidChange: RMTextFieldClosure = nil
 
     public var whichIsNextResponder: ((_ responder: UIResponder) -> UIResponder?)?
 
@@ -154,8 +154,7 @@ public class RMTextField: UIView {
     }
 
     private func initialize() {
-      let bundle = Bundle(for: type(of: self))
-      guard let view = UINib(nibName: "RMTextField", bundle: bundle).instantiate(withOwner: self, options: nil).first as? UIView else { return }
+      guard let view = UINib(nibName: "RMTextField", bundle: .module).instantiate(withOwner: self, options: nil).first as? UIView else { return }
       view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
       view.frame = bounds
       view.layer.masksToBounds = true
