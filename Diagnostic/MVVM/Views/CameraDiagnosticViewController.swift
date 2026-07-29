@@ -92,7 +92,7 @@ final class CameraDiagnosticViewController: BaseViewController<CameraDiagnosticV
             return
         }
 
-        if let cgImage = photo.previewCGImageRepresentation()?.takeUnretainedValue() {
+        if let cgImage = photo.previewCGImageRepresentation() {
             let image = UIImage(cgImage: cgImage, scale: 1, orientation: UIDevice.current.orientation.imageOrientation)
             displayPhoto(image)
         }
@@ -147,7 +147,7 @@ final class CameraDiagnosticViewController: BaseViewController<CameraDiagnosticV
 
     private func viewModelPropertyChanged(_ name: String) {
       switch name {
-      case CameraDiagnosticViewModel.PropertyNames.errorMessage.rawValue:
+      case BaseViewModel.PropertyNames.errorMessage.rawValue:
           displayErrorLabel(error: viewModel.errorMessage)
       case CameraDiagnosticViewModel.PropertyNames.titleMessage.rawValue:
            titleLabel.text =  viewModel.titleMessage
