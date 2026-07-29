@@ -28,6 +28,18 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
@@ -66,3 +78,8 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Claude Code
+.claude/settings.local.json
+.claude/*.local.json
+CLAUDE.local.md
