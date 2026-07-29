@@ -1,0 +1,7 @@
+# Diagnostic
+
+Diagnostic is a mobile app for iPhone that walks a user through a series of guided tests — such as checking a camera, taking a test photo, and running a timer — and then puts together a report of the results. It is designed to be simple enough for someone with no technical background to complete a self-check and share the outcome with someone else, for example over a local network connection.
+
+**Demo login only.** This is a prototype used to test the interface, not a production service — there is no real backend or account system. The app only works with the fake test account **romain@mullot.fr** / **Passw0rd**. Beyond sign-in, the whole diagnostic runs locally on the device and simply simulates sending a report; no data is actually transmitted anywhere.
+
+The app is an Xcode workspace built with Swift Package Manager, split into the `Diagnostic` app target plus two shared local packages, `RMCore` (services and extensions) and `RMUI` (shared UI components), with remote packages `FTLinearActivityIndicator`, `SwiftMessages`, and `Reachability.swift` for supporting functionality. The app code follows an MVVM structure (`Diagnostic/MVVM/{Models,Views,ViewModels}`), with cross-cutting logic centralized in singleton services (`DiagnosticService`, `UserService`, `NavigationService`, `LocalhostServerService`) that build, encode, and route the diagnostic report, and localized strings generated via SwiftGen into `Diagnostic/Generated/Strings.swift`. See `CLAUDE.md` for the full module breakdown.
