@@ -20,9 +20,11 @@ final class NavigationService: NavigationServiceProtocol {
     // MARK: - Attributes
 
     static let sharedInstance = NavigationService()
-
     private var navigationController: UINavigationController {
-      guard let navigationController = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController else {
+        guard let navigationController = UIApplication.shared.connectedScenes
+            .flatMap({ ($0 as? UIWindowScene)?.windows ?? [] })
+            .first(where: { $0.isKeyWindow })?
+            .rootViewController as? UINavigationController else {
           fatalError()
       }
       return navigationController
