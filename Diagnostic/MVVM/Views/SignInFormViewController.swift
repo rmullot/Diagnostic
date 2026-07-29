@@ -102,14 +102,14 @@ final class SignInFormViewController: BaseViewController<SignInViewModel> {
     case SignInViewModel.PropertyNames.isPasswordEnoughStrong.rawValue:
         processTextFieldValidation(passwordTextField, isValid: viewModel.isPasswordEnoughStrong)
         signInButton.isEnabled = viewModel.isValid
-    case SignInViewModel.PropertyNames.errorMessage.rawValue:
+    case BaseViewModel.PropertyNames.errorMessage.rawValue:
         if viewModel.errorMessage.isNotEmpty {
             errorLabel.text = viewModel.errorMessage
         }
     case SignInViewModel.PropertyNames.signInInValid.rawValue:
         processTextFieldValidation(emailTextField, isValid: viewModel.isEmailValid)
         processTextFieldValidation(passwordTextField, isValid: viewModel.isPasswordValid)
-    case SignInViewModel.PropertyNames.isValid.rawValue:
+    case BaseViewModel.PropertyNames.isValid.rawValue:
          errorLabel.text = ""
     default:
         break

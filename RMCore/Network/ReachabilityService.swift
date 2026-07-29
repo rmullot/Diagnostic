@@ -64,7 +64,7 @@ public final class ReachabilityService {
           delegate.onlineModeChanged(self.onlineMode)
       })
       self.onlineMode = .online
-      reachability = Reachability()
+      reachability = try? Reachability()
       if reachability != nil {
           do {
               NotificationCenter.default.addObserver(self,

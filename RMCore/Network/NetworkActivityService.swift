@@ -28,7 +28,7 @@ public final class NetworkActivityService: NetworkActivityServiceProtocol {
 
   private let maxActivityDuration: Double = 120 //in seconds
 
-  private var disableActivityIndicatorClosure: DispatchQueue.CancellableClosure
+  private var disableActivityIndicatorClosure: DispatchQueue.CancellableClosure = nil
 
   private init() {}
 
